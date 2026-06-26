@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tim Girard | Men's Life Coach</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&family=Newsreader:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAF8; --white: #FFFFFF; --text: #222222;
+      --muted: #6E7781; --border: #E7E9EC; --accent: #2563EB; --gold: #C89B3C;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; font-size: 1rem; }
+    nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 1.2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .logo { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--text); letter-spacing: -0.01em; }
+    .logo span { color: var(--accent); }
+    .btn { display: inline-block; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.88rem; text-decoration: none; padding: 0.6rem 1.4rem; border-radius: 8px; transition: all 0.2s; letter-spacing: 0.01em; }
+    .btn-accent { background: var(--accent); color: #fff; }
+    .btn-accent:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
+    .btn-outline:hover { background: var(--accent); color: #fff; }
+    .btn-lg { padding: 0.85rem 2rem; font-size: 0.95rem; border-radius: 10px; }
+    .btn-white { background: #fff; color: var(--accent); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.95rem; text-decoration: none; padding: 0.85rem 2rem; border-radius: 10px; transition: all 0.2s; display: inline-block; }
+    .btn-white:hover { background: #f0f4ff; transform: translateY(-1px); }
+    .hero { background: var(--white); padding: 7rem 2rem 6rem; text-align: center; border-bottom: 1px solid var(--border); }
+    .hero .eyebrow { font-family: 'Manrope', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Manrope', sans-serif; font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; color: var(--text); max-width: 720px; margin: 0 auto 1.5rem; }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero .sub { font-size: 1.1rem; color: var(--muted); max-width: 520px; margin: 0 auto 2.5rem; font-weight: 400; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .section { padding: 5.5rem 2rem; }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+    .section-label { font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .section-title { font-family: 'Manrope', sans-serif; font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; color: var(--text); margin-bottom: 1rem; }
+    .section-body { font-size: 1.05rem; color: var(--muted); max-width: 600px; line-height: 1.75; }
+    .quote-section { background: var(--bg); padding: 5rem 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; }
+    .quote-section blockquote { font-family: 'Newsreader', serif; font-style: italic; font-size: clamp(1.5rem, 3vw, 2.1rem); color: var(--text); max-width: 680px; margin: 0 auto 1.2rem; line-height: 1.5; font-weight: 400; }
+    .quote-section cite { font-family: 'Manrope', sans-serif; font-size: 0.85rem; color: var(--muted); font-style: normal; letter-spacing: 0.06em; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .who-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+    .who-card .card-label { font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
+    .who-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .who-card ul li { font-size: 0.97rem; color: var(--text); padding-left: 1.2rem; position: relative; }
+    .who-card ul li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+    .pillars-bg { background: var(--text); }
+    .pillars-bg .section-title { color: #fff; }
+    .pillars-bg .section-label { color: var(--gold); }
+    .pillars-bg .section-body { color: #9ca3af; }
+    .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.2rem; margin-top: 3rem; }
+    .pillar-card { background: #2d2d2d; border: 1px solid #3d3d3d; border-radius: 12px; padding: 1.8rem 1.6rem; }
+    .pillar-card .p-num { font-family: 'Manrope', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .pillar-card h3 { font-family: 'Manrope', sans-serif; font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 1.1rem; }
+    .pillar-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+    .pillar-card ul li { font-size: 0.88rem; color: #9ca3af; padding-left: 1rem; position: relative; }
+    .pillar-card ul li::before { content: '–'; position: absolute; left: 0; color: #555; }
+    .about-grid { display: grid; grid-template-columns: 260px 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+    .photo-placeholder { background: var(--white); border: 1px solid var(--border); border-radius: 12px; aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: var(--muted); font-family: 'Manrope', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .photo-placeholder svg { width: 40px; height: 40px; opacity: 0.25; }
+    .about-text p { font-size: 1rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
+    .about-text p.lead { font-size: 1.1rem; color: var(--text); font-weight: 500; }
+    .cta-banner { background: var(--accent); padding: 5.5rem 2rem; text-align: center; }
+    .cta-banner h2 { font-family: 'Manrope', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -0.025em; color: #fff; max-width: 600px; margin: 0 auto 1rem; line-height: 1.15; }
+    .cta-banner p { color: #bfdbfe; font-size: 1.05rem; max-width: 480px; margin: 0 auto 2.2rem; line-height: 1.7; }
+    footer { background: var(--white); border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    footer p { font-size: 0.82rem; color: var(--muted); }
+    @media (max-width: 680px) {
+      .who-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .photo-placeholder { aspect-ratio: 4/3; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Tim Girard<span>.</span></div>
+    <a class="btn btn-accent" href="https://calendar.app.google/k3iLUEM8Nym9PTmL9" target="_blank">Book a Free Call</a>
+  </nav>
+  <section class="hero">
+    <p class="eyebrow">Men's Life Coach</p>
+    <h1>Stop Living on <em>Autopilot.</em></h1>
+    <p class="sub">You provide. You show up. But somewhere between the career, the kids, and the responsibilities — you stopped feeling like yourself. There's another way.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent btn-lg" href="https://calendar.app.google/k3iLUEM8Nym9PTmL9" target="_blank">Book Your Free Discovery Call</a>
+      <a class="btn btn-outline btn-lg" href="#about">Meet Tim</a>
+    </div>
+  </section>
+  <section class="quote-section">
+    <blockquote>"Most men aren't broken. They're just carrying too much — too quietly."</blockquote>
+    <cite>— Tim Girard</cite>
+  </section>
+  <section class="section" style="background: var(--white); border-bottom: 1px solid var(--border);">
+    <div class="section-inner">
+      <p class="section-label">Who This Is For</p>
+      <h2 class="section-title">You don't need to be struggling<br>to deserve support.</h2>
+      <p class="section-body">You simply know life could feel different. That's enough to start.</p>
+      <div class="who-grid">
+        <div class="who-card">
+          <p class="card-label">You're ready to</p>
+          <ul>
+            <li>Become more patient with your kids</li>
+            <li>Reconnect with your partner</li>
+            <li>Stop bringing work home</li>
+            <li>Build healthier routines</li>
+            <li>Regain your confidence</li>
+            <li>Lead with intention, not reaction</li>
+          </ul>
+        </div>
+        <div class="who-card">
+          <p class="card-label">You don't need to be</p>
+          <ul>
+            <li>Falling apart to ask for help</li>
+            <li>At rock bottom to want more</li>
+            <li>Perfect before you start</li>
+            <li>Someone who has it figured out</li>
+            <li>Certain it will work</li>
+            <li>Anything other than willing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section pillars-bg">
+    <div class="section-inner">
+      <p class="section-label">The Framework</p>
+      <h2 class="section-title">Four Pillars.<br>One Direction.</h2>
+      <p class="section-body">A simple model for becoming the man you respect — at home, at work, and within yourself.</p>
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <p class="p-num">01</p>
+          <h3>Lead Yourself</h3>
+          <ul><li>Identity</li><li>Health & Habits</li><li>Confidence</li><li>Mindset</li></ul>
+        </div>
+        <div class="pillar-card">
+          <p class="p-num">02</p>
+          <h3>Lead Your Home</h3>
+          <ul><li>Marriage</li><li>Parenting</li><li>Communication</li><li>Presence</li></ul>
+        </div>
+        <div class="pillar-card">
+          <p class="p-num">03</p>
+          <h3>Build What Matters</h3>
+          <ul><li>Career & Purpose</li><li>Money</li><li>Boundaries</li><li>Energy</li></ul>
+        </div>
+        <div class="pillar-card">
+          <p class="p-num">04</p>
+          <h3>Leave a Legacy</h3>
+          <ul><li>Character</li><li>Community</li><li>Impact</li><li>Growth</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="about" style="background: var(--white); border-top: 1px solid var(--border);">
+    <div class="section-inner">
+      <p class="section-label">About</p>
+      <h2 class="section-title">I'm not here because<br>I have all the answers.</h2>
+      <div class="about-grid">
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          Headshot coming soon
+        </div>
+        <div class="about-text">
+          <p class="lead">I'm here because I've lived the questions.</p>
+          <p>I'm a husband. A father. I've spent nearly two decades leading teams, helping people navigate change, and coaching leaders through uncertainty.</p>
+          <p>But the hardest leadership lessons didn't happen in boardrooms. They happened at my own kitchen table — trying to balance work with family, learning to communicate better, choosing discipline over drift.</p>
+          <p>Today I help other men do the same. Not because I'm perfect. Because I'm committed to becoming better — and I know you are too.</p>
+          <p>My coaching focuses on alignment, not performance. When you become the man you respect, everything else improves. Your marriage. Your parenting. Your confidence. Your health. Not because we chase those things — because they naturally follow.</p>
+          <br/>
+          <a class="btn btn-accent btn-lg" href="https://calendar.app.google/k3iLUEM8Nym9PTmL9" target="_blank">Book Your Free Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-banner">
+    <h2>You don't need another motivational video.</h2>
+    <p>No pressure. No performance. Just an honest conversation about where you are and where you want to go.</p>
+    <a class="btn-white" href="https://calendar.app.google/k3iLUEM8Nym9PTmL9" target="_blank">Book Your Free Discovery Call</a>
+  </section>
+  <footer>
+    <div class="logo">Tim Girard<span style="color:var(--accent)">.</span></div>
+    <p>© 2026 Tim Girard Coaching. All rights reserved.</p>
+  </footer>
+</body>
+</html>
