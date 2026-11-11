@@ -14,6 +14,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&family=Newsreader:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var palette = (params.get("palette") || "").toLowerCase();
+      if (palette === "a" || palette === "b" || palette === "c") {
+        document.documentElement.dataset.palette = palette;
+        if (params.get("shot") === "1") document.documentElement.dataset.shot = "1";
+      }
+    })();
+  </script>
 </head>
 <body>
   <!--
@@ -125,6 +135,13 @@
       <p>© 2026 Coach2Learn. All rights reserved.</p>
     </div>
   </footer>
+  <aside class="palette-switch" aria-label="Palette preview">
+    <p>Palette preview</p>
+    <a data-palette="a" href="?palette=a">A</a>
+    <a data-palette="b" href="?palette=b">B</a>
+    <a data-palette="c" href="?palette=c">C</a>
+    <a data-palette="" href="?">Current</a>
+  </aside>
   <script src="site.js" defer></script>
 </body>
 </html>
