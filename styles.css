@@ -1,85 +1,29 @@
-/* Tim Girard Coaching — locked tokens.
-   Warm white, one blue accent, gold used sparingly.
+/* Tim Girard Coaching — palette B, navy forward.
    Manrope headlines, Inter body, Newsreader for the pull quote. */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg: #FAFAF8;
-  --white: #FFFFFF;
-  --text: #222222;
-  --muted: #6E7781;
-  --border: #E7E9EC;
-  --accent: #2563EB;
-  --accent-hover: #1d4ed8;
-  --on-accent: #ffffff;
-  --cta-text: #bfdbfe;
-  --gold: #C89B3C;
-  --mark: #C89B3C;
-  --note: #92400E;
-  --note-bg: #FFFBEB;
-  --pillars: #222222;
-  --pillar-card: #2d2d2d;
-  --pillar-line: #3d3d3d;
-  --pillar-title: #ffffff;
-  --pillar-body: #9ca3af;
-  --pillar-dash: #555555;
-  --pillar-label: #C89B3C;
-  --btn-white-hover: #f0f4ff;
-  --selection: #dbe4ff;
-}
-/* Previews only. No param means the tokens above. ?palette=a|b|c */
-html[data-palette="a"] {
-  --bg: #F7F5F1;
-  --text: #1B2D3B;
-  --muted: #5A6168;
-  --border: #E4DFD6;
-  --accent: #2253B6;
-  --accent-hover: #1E4697;
-  --cta-text: #D3DDF0;
-  --mark: #2253B6;
-  --pillars: #1B2D3B;
-  --pillar-card: #2C4254;
-  --pillar-line: #3E5670;
-  --pillar-body: #D5DDE6;
-  --pillar-dash: #D5DDE6;
-  --pillar-label: #D6E3FA;
-  --btn-white-hover: #E7EEF8;
-  --selection: #D6E2F6;
-}
-html[data-palette="b"] {
   --bg: #F6F4EF;
+  --white: #FFFFFF;
   --text: #1B2D3B;
   --muted: #5A6168;
   --border: #E6E0D4;
   --accent: #245ED9;
   --accent-hover: #204FB2;
+  --on-accent: #FFFFFF;
   --cta-text: #E5ECFA;
+  --focus: #12202C;
   --mark: #245ED9;
+  --note: #92400E;
+  --note-bg: #FFFBEB;
   --pillars: #12202C;
   --pillar-card: #1B2D3B;
   --pillar-line: #2C4254;
+  --pillar-title: #FFFFFF;
   --pillar-body: #D7E0E8;
   --pillar-dash: #D7E0E8;
   --pillar-label: #D6E4FA;
   --btn-white-hover: #E8F0FC;
   --selection: #D9E6FA;
-}
-html[data-palette="c"] {
-  --bg: #F8F6F2;
-  --text: #1E3344;
-  --muted: #4E6460;
-  --border: #DEE3E0;
-  --accent: #275AC1;
-  --accent-hover: #224B9F;
-  --cta-text: #DCE5F5;
-  --mark: #275AC1;
-  --pillars: #2C4254;
-  --pillar-card: #385066;
-  --pillar-line: #4C657A;
-  --pillar-body: #E3EAF0;
-  --pillar-dash: #E3EAF0;
-  --pillar-label: #E7F0FA;
-  --btn-white-hover: #E7F0F6;
-  --selection: #D9E6F4;
 }
 html { scroll-behavior: smooth; color-scheme: light; }
 body {
@@ -91,7 +35,8 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.cta-banner :focus-visible { outline-color: var(--on-accent); }
 ::selection { background: var(--selection); }
 
 .skip {
@@ -601,54 +546,4 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn, .btn-white, .btn-accent { transition: none; }
-}
-
-/* Shown only while ?palette=a|b|c is set. Hidden for screenshots via data-shot. */
-.palette-switch { display: none; }
-html[data-palette] body { padding-bottom: 4.75rem; }
-html[data-shot="1"] body { padding-bottom: 0; }
-html[data-palette] .palette-switch {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  position: fixed;
-  left: 50%;
-  bottom: 1rem;
-  transform: translateX(-50%);
-  z-index: 160;
-  max-width: calc(100% - 1.5rem);
-  background: var(--white);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.35rem 0.4rem 0.35rem 0.85rem;
-  box-shadow: 0 8px 24px rgba(27, 45, 59, 0.14);
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-html[data-shot="1"] .palette-switch { display: none; }
-.palette-switch p {
-  margin: 0;
-  color: var(--muted);
-  font-weight: 600;
-  white-space: nowrap;
-}
-.palette-switch a {
-  text-decoration: none;
-  color: var(--text);
-  border-radius: 999px;
-  padding: 0.32rem 0.7rem;
-}
-.palette-switch a[aria-current="true"] {
-  background: var(--accent);
-  color: var(--on-accent);
-}
-@media (max-width: 680px) {
-  html[data-palette] .palette-switch {
-    flex-wrap: wrap;
-    justify-content: center;
-    border-radius: 16px;
-    width: calc(100% - 1.5rem);
-  }
 }
