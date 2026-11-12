@@ -1,9 +1,10 @@
 /* Tim Girard Coaching — palette A, Navy & Apricot.
    Navy #1B2D3B for text and dark cards; deep #12202C for the field and focus.
-   Terracotta #B4532A for buttons, links, the logo dot, marks, and the banner
-   (white text). Hover #9A4622. Cream #FAF7F2 page, white cards.
-   Apricot #F2A65A for highlights on dark only; navy text if apricot is a fill.
-   Sage mist #D5E6DE for the quote band, selection, and the white-button hover.
+   Terracotta #B4532A for buttons, links, the logo dot, and marks (white text).
+   Hover #9A4622. Cream #FAF7F2 page, white cards. The closing banner is navy,
+   with an apricot button and a navy label. Apricot #F2A65A is also the highlight
+   on dark sections; navy text whenever apricot is a fill. Hover #E8954A.
+   Sage mist #D5E6DE for the quote band and selection.
    Dividers are warm cream-grey #E6DFD3. Stone #5A6168 for muted text.
    Manrope headlines, Inter body, Newsreader quote. */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -19,6 +20,7 @@
   --accent-hover: #9A4622;
   --on-accent: #FFFFFF;
   --apricot: #F2A65A;
+  --apricot-hover: #E8954A;
   --on-apricot: #1B2D3B;
   --mist: #D5E6DE;
   --cta-text: #FAF7F2;
@@ -34,7 +36,6 @@
   --pillar-body: #E7E1D6;
   --pillar-dash: #E7E1D6;
   --pillar-label: var(--apricot);
-  --btn-white-hover: var(--mist);
   --selection: var(--mist);
 }
 html { scroll-behavior: smooth; color-scheme: light; }
@@ -48,7 +49,7 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
-.cta-banner :focus-visible { outline-color: var(--on-accent); }
+.cta-banner :focus-visible { outline-color: var(--apricot); }
 ::selection { background: var(--selection); color: var(--text); }
 
 .skip {
@@ -135,18 +136,18 @@ nav {
 .btn-outline:hover { background: var(--accent); color: var(--on-accent); }
 .btn-lg { padding: 0.85rem 2rem; font-size: 0.95rem; border-radius: 10px; }
 .btn-white {
-  background: var(--white);
-  color: var(--accent);
+  background: var(--apricot);
+  color: var(--on-apricot);
   font-family: 'Manrope', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
   padding: 0.85rem 2rem;
   border-radius: 10px;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
   display: inline-block;
 }
-.btn-white:hover { background: var(--btn-white-hover); color: var(--accent-hover); transform: translateY(-1px); }
+.btn-white:hover { background: var(--apricot-hover); color: var(--on-apricot); transform: translateY(-1px); }
 .btn-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.8rem; }
 
 .hero {
@@ -447,7 +448,7 @@ nav {
 
 /* CTA padding fix from the design handoff: less empty space in the banner. */
 .cta-banner {
-  background: var(--accent);
+  background: var(--text);
   padding: 4rem 2rem 4.5rem;
   text-align: center;
 }
@@ -569,13 +570,11 @@ a.btn.btn-outline:hover {
   color: var(--on-accent);
 }
 a.btn-white,
+a.btn-white:hover,
 a.btn-white:focus,
 a.btn-white:focus-visible,
 a.btn-white[aria-current="page"] {
-  color: var(--accent);
-}
-a.btn-white:hover {
-  color: var(--accent-hover);
+  color: var(--on-apricot);
 }
 
 @media (max-width: 900px) {
