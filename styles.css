@@ -4,7 +4,7 @@
    Hover #9A4622. Cream #FAF7F2 page, white cards. The closing banner is navy,
    with an apricot button and a navy label. Apricot #F2A65A is also the highlight
    on dark sections; navy text whenever apricot is a fill. Hover #E8954A.
-   Sage mist #D5E6DE for the quote band and selection.
+   Sage mist #D5E6DE is the text selection colour. The quote band uses the page cream.
    Dividers are warm cream-grey #E6DFD3. Stone #5A6168 for muted text.
    Manrope headlines, Inter body, Newsreader quote. */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -222,7 +222,7 @@ nav {
 .section-body a:not(.btn) { color: var(--accent); }
 
 .quote-section {
-  background: var(--mist);
+  background: var(--bg);
   padding: 5rem 2rem;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
