@@ -109,16 +109,24 @@
       <p>Tim Girard Coaching. The business name is Coach2Learn.</p>
       <p>Dads looking for a free community can visit <a href="https://thedadpub.com" target="_blank" rel="noopener noreferrer">The Dad Pub</a>.</p>
     </div>
-    <!-- MAILERLITE_PLACEHOLDER: replace the form action with the MailerLite endpoint. -->
-    <form class="newsletter" action="#mailerlite-signup" method="post">
-      <label for="newsletter-email">A note from Tim, now and then</label>
-      <p class="hint">Short notes for men who want to lead with a bit more intention. Unsubscribe whenever you like.</p>
+    <form class="newsletter" method="post" action="https://assets.mailerlite.com/jsonp/2775209/forms/203960973231392575/subscribe">
+      <h2>Tim Girard Coaching Updates</h2>
+      <p class="hint">Occasional notes on leadership, fatherhood, and growth from Tim Girard. No spam, unsubscribe anytime.</p>
       <div class="newsletter-row">
-        <input id="newsletter-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com" />
-        <button class="btn btn-accent" type="submit">Join</button>
+        <div class="newsletter-field">
+          <label for="newsletter-name">First name</label>
+          <input id="newsletter-name" name="fields[name]" type="text" required autocomplete="given-name" />
+        </div>
+        <div class="newsletter-field">
+          <label for="newsletter-email">Email</label>
+          <input id="newsletter-email" name="fields[email]" type="email" required autocomplete="email" inputmode="email" />
+        </div>
+        <button class="btn btn-accent" type="submit">Subscribe</button>
       </div>
-      <p class="placeholder-note">MailerLite isn't connected yet. This form does not send your email anywhere.</p>
-      <p class="form-status" role="status" hidden>Nothing was sent. The list isn't connected yet.</p>
+      <input type="hidden" name="ml-submit" value="1" />
+      <input type="hidden" name="anticsrf" value="true" />
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <p class="newsletter-privacy">Details are on the <a href="privacy.html#email-notes">privacy page</a>.</p>
     </form>
     <div class="footer-meta">
       <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></p>

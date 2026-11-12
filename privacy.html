@@ -41,9 +41,9 @@
     <p>Paid sessions will be taken through Stripe Payment Links. Those links are not connected on this site yet. When they are, you pay on Stripe, not on this website. This site does not see or store your card number. Stripe's privacy policy covers the payment: <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a>.</p>
     <p>The price shown on the site is the amount charged, in Canadian dollars.</p>
 
-    <h2>Notes by email, through MailerLite</h2>
-    <p>The signup in the footer is a placeholder. The form action is <code>#mailerlite-signup</code>, and submitting it does not add you to a list or send your address anywhere.</p>
-    <p>When Tim connects MailerLite, the form will send the email address you submit to MailerLite so he can write to you now and then. You will be able to unsubscribe from any message. MailerLite's privacy policy is at <a href="https://www.mailerlite.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">mailerlite.com/legal/privacy-policy</a>. This paragraph will need a small edit once that connection is real, because the form will then send the address.</p>
+    <h2 id="email-notes">Notes by email, through MailerLite</h2>
+    <p>The footer form, Tim Girard Coaching Updates, sends the first name and email address you enter to MailerLite. MailerLite is the processor for that list. Joining uses double opt-in: MailerLite emails you a confirmation, and you are added only after you confirm. You can unsubscribe from any message.</p>
+    <p>MailerLite's privacy policy is at <a href="https://www.mailerlite.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">mailerlite.com/legal/privacy-policy</a>.</p>
 
     <h2>Fonts</h2>
     <p>The pages load the typefaces Manrope, Inter, and Newsreader from Google Fonts. Your browser requests those files from Google. That is the font request, not a tracker Tim added. Google's policy is at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</p>
@@ -53,7 +53,7 @@
     <p id="privacy-email">To ask what Tim holds about you from this practice, or to ask for a correction, write to <a href="#privacy-email">[email to be added]</a>. He reads it himself. There is no separate privacy office.</p>
     <p>Calendly, Stripe, MailerLite, and Google hold information on their own systems when you use them. A request to Tim covers what he holds. Their policies cover what they hold.</p>
 
-    <p class="updated">Last updated 11 November 2026.</p>
+    <p class="updated">Last updated 12 November 2026.</p>
   </main>
 
   <footer>
@@ -62,16 +62,24 @@
       <p>Tim Girard Coaching. The business name is Coach2Learn.</p>
       <p>Dads looking for a free community can visit <a href="https://thedadpub.com" target="_blank" rel="noopener noreferrer">The Dad Pub</a>.</p>
     </div>
-    <!-- MAILERLITE_PLACEHOLDER: replace the form action with the MailerLite endpoint. -->
-    <form class="newsletter" action="#mailerlite-signup" method="post">
-      <label for="newsletter-email">A note from Tim, now and then</label>
-      <p class="hint">Short notes for men who want to lead with a bit more intention. Unsubscribe whenever you like.</p>
+    <form class="newsletter" method="post" action="https://assets.mailerlite.com/jsonp/2775209/forms/203960973231392575/subscribe">
+      <h2>Tim Girard Coaching Updates</h2>
+      <p class="hint">Occasional notes on leadership, fatherhood, and growth from Tim Girard. No spam, unsubscribe anytime.</p>
       <div class="newsletter-row">
-        <input id="newsletter-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com" />
-        <button class="btn btn-accent" type="submit">Join</button>
+        <div class="newsletter-field">
+          <label for="newsletter-name">First name</label>
+          <input id="newsletter-name" name="fields[name]" type="text" required autocomplete="given-name" />
+        </div>
+        <div class="newsletter-field">
+          <label for="newsletter-email">Email</label>
+          <input id="newsletter-email" name="fields[email]" type="email" required autocomplete="email" inputmode="email" />
+        </div>
+        <button class="btn btn-accent" type="submit">Subscribe</button>
       </div>
-      <p class="placeholder-note">MailerLite isn't connected yet. This form does not send your email anywhere.</p>
-      <p class="form-status" role="status" hidden>Nothing was sent. The list isn't connected yet.</p>
+      <input type="hidden" name="ml-submit" value="1" />
+      <input type="hidden" name="anticsrf" value="true" />
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <p class="newsletter-privacy">Details are on the <a href="privacy.html#email-notes">privacy page</a>.</p>
     </form>
     <div class="footer-meta">
       <p><a href="index.html">Home</a> · <a href="work-with-me.html">Work With Me</a></p>
