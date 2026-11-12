@@ -1,29 +1,41 @@
-/* Tim Girard Coaching — palette B, navy forward.
-   Manrope headlines, Inter body, Newsreader for the pull quote. */
+/* Tim Girard Coaching — palette C, Navy & Sage.
+   Navy #1B2D3B for brand and text; deep #12202C for dark sections and focus.
+   Deep teal #2F6F5E for buttons, links, marks, and the logo accent (white text).
+   Warm sand #F4EFE6 for the page, white for cards. Marigold #F4B860 for small
+   highlights on dark, with navy text whenever marigold is a fill. Sage #A9C6A0
+   for dividers; light sage #E3ECDF for soft bands, selection, and hover.
+   Stone #5A6168 for muted text. Manrope headlines, Inter body, Newsreader quote. */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg: #F6F4EF;
+  --bg: #F4EFE6;
   --white: #FFFFFF;
   --text: #1B2D3B;
   --muted: #5A6168;
-  --border: #E6E0D4;
-  --accent: #245ED9;
-  --accent-hover: #204FB2;
+  --sage: #A9C6A0;
+  --sage-tint: #E3ECDF;
+  --marigold: #F4B860;
+  --on-marigold: #1B2D3B;
+  --border: var(--sage);
+  /* Sage darkened until the field edge clears 3:1 on sand and on white. */
+  --ui-line: #708978;
+  --accent: #2F6F5E;
+  --accent-hover: #275C4E;
   --on-accent: #FFFFFF;
-  --cta-text: #E5ECFA;
+  --cta-text: #F4EFE6;
   --focus: #12202C;
-  --mark: #245ED9;
+  --mark: #2F6F5E;
   --note: #92400E;
   --note-bg: #FFFBEB;
   --pillars: #12202C;
   --pillar-card: #1B2D3B;
-  --pillar-line: #2C4254;
+  /* Navy mixed with sage until the card edge clears 3:1 on the card and the ground. */
+  --pillar-line: #627A6E;
   --pillar-title: #FFFFFF;
-  --pillar-body: #D7E0E8;
-  --pillar-dash: #D7E0E8;
-  --pillar-label: #D6E4FA;
-  --btn-white-hover: #E8F0FC;
-  --selection: #D9E6FA;
+  --pillar-body: #D7E6DE;
+  --pillar-dash: #D7E6DE;
+  --pillar-label: var(--marigold);
+  --btn-white-hover: var(--sage-tint);
+  --selection: var(--sage-tint);
 }
 html { scroll-behavior: smooth; color-scheme: light; }
 body {
@@ -37,7 +49,7 @@ img { max-width: 100%; display: block; }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
 .cta-banner :focus-visible { outline-color: var(--on-accent); }
-::selection { background: var(--selection); }
+::selection { background: var(--selection); color: var(--text); }
 
 .skip {
   position: absolute;
@@ -87,11 +99,20 @@ nav {
   font-family: 'Manrope', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--muted);
   text-decoration: none;
 }
-.nav-links a:hover,
-.nav-links a[aria-current="page"] { color: var(--text); }
+.nav-links a:not(.btn) { color: var(--muted); }
+.nav-links a:not(.btn):hover,
+.nav-links a:not(.btn)[aria-current="page"] { color: var(--text); }
+/* .nav-links a is more specific than .btn-accent, so buttons keep their own text. */
+.nav-links a.btn-accent,
+.nav-links a.btn-accent:hover,
+.nav-links a.btn-accent:focus-visible,
+.nav-links a.btn-accent[aria-current="page"] { color: var(--on-accent); }
+.nav-links a.btn-outline,
+.nav-links a.btn-outline[aria-current="page"] { color: var(--accent); }
+.nav-links a.btn-outline:hover,
+.nav-links a.btn-outline:focus-visible { color: var(--on-accent); }
 
 .btn {
   display: inline-block;
@@ -109,7 +130,7 @@ nav {
   line-height: 1.3;
 }
 .btn-accent { background: var(--accent); color: var(--on-accent); }
-.btn-accent:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn-accent:hover { background: var(--accent-hover); color: var(--on-accent); transform: translateY(-1px); }
 .btn-outline { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
 .btn-outline:hover { background: var(--accent); color: var(--on-accent); }
 .btn-lg { padding: 0.85rem 2rem; font-size: 0.95rem; border-radius: 10px; }
@@ -125,7 +146,7 @@ nav {
   transition: background 0.2s, transform 0.2s;
   display: inline-block;
 }
-.btn-white:hover { background: var(--btn-white-hover); transform: translateY(-1px); }
+.btn-white:hover { background: var(--btn-white-hover); color: var(--accent); transform: translateY(-1px); }
 .btn-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.8rem; }
 
 .hero {
@@ -200,7 +221,7 @@ nav {
 .section-body a { color: var(--accent); }
 
 .quote-section {
-  background: var(--bg);
+  background: var(--sage-tint);
   padding: 5rem 2rem;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -424,7 +445,7 @@ nav {
 .fine-print p { color: var(--muted); font-size: 0.95rem; margin-bottom: 0.8rem; }
 .fine-print a { color: var(--accent); }
 
-/* CTA padding fix from the design handoff: less empty blue space. */
+/* CTA padding fix from the design handoff: less empty space in the banner. */
 .cta-banner {
   background: var(--accent);
   padding: 4rem 2rem 4.5rem;
@@ -459,7 +480,7 @@ footer {
   align-items: start;
 }
 .footer-brand p { font-size: 0.9rem; color: var(--muted); margin-top: 0.7rem; max-width: 420px; }
-.footer-brand a { color: var(--accent); }
+.footer-brand a:not(.logo) { color: var(--accent); }
 .newsletter label {
   display: block;
   font-family: 'Manrope', sans-serif;
@@ -472,7 +493,7 @@ footer {
 .newsletter input {
   flex: 1;
   min-width: 0;
-  border: 1px solid var(--border);
+  border: 1px solid var(--ui-line);
   border-radius: 8px;
   padding: 0.65rem 0.8rem;
   font: inherit;
@@ -490,9 +511,12 @@ footer {
   padding-top: 0.4rem;
   border-top: 1px solid var(--border);
 }
-.footer-meta p, .footer-meta a { font-size: 0.82rem; color: var(--muted); }
-.footer-meta a { color: var(--accent); text-decoration: none; }
-.footer-meta a:hover { text-decoration: underline; }
+.footer-meta p, .footer-meta a:not(.btn) { font-size: 0.82rem; color: var(--muted); }
+.footer-meta a:not(.btn) { color: var(--accent); text-decoration: none; }
+.footer-meta a:not(.btn):hover { text-decoration: underline; }
+.footer-meta a.btn-accent,
+.footer-meta a.btn-accent:hover,
+.footer-meta a.btn-accent[aria-current="page"] { color: var(--on-accent); }
 
 .prose { max-width: 680px; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
 .prose h1 {
