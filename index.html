@@ -10,6 +10,7 @@
   <meta property="og:description" content="Most men aren't broken. They're just carrying too much — too quietly. Coaching for men, leaders, and professionals." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://coach2learn.ca/" />
+  <meta property="og:image" content="https://coach2learn.ca/images/tim-girard-960.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&family=Newsreader:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
@@ -165,12 +166,10 @@
         <p class="section-label">About</p>
         <h2 class="section-title">I'm not here because<br>I have all the answers.</h2>
         <div class="about-grid">
-          <!-- HEADSHOT_PLACEHOLDER: Tim will supply a photo. Replace this div with
-               <img class="headshot" src="tim.jpg" alt="Tim Girard"> -->
-          <div class="photo-placeholder" role="img" aria-label="Headshot coming soon. Tim will supply a photo.">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            Headshot coming soon
-          </div>
+          <picture>
+            <source type="image/webp" srcset="images/tim-girard-480.webp 480w, images/tim-girard-960.webp 960w" sizes="(max-width: 680px) min(420px, calc(100vw - 2.5rem)), 260px" />
+            <img class="headshot" src="images/tim-girard-960.jpg" srcset="images/tim-girard-480.jpg 480w, images/tim-girard-960.jpg 960w" sizes="(max-width: 680px) min(420px, calc(100vw - 2.5rem)), 260px" alt="Tim Girard" width="960" height="1330" loading="lazy" decoding="async" />
+          </picture>
           <div class="about-text">
             <p class="lead">I'm here because I've lived the questions.</p>
             <p>I'm Tim Girard. I coach men, leaders, and professionals. Coach2Learn is the name of the practice.</p>
