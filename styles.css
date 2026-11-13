@@ -27,7 +27,6 @@
   --focus: #12202C;
   --mark: #B4532A;
   --note: #92400E;
-  --note-bg: #FFFBEB;
   --pillars: #12202C;
   --pillar-card: #1B2D3B;
   /* Navy mixed with apricot until the card edge clears 3:1 on the card and the field. */
@@ -415,16 +414,6 @@ nav {
 .price-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
 .price-actions { margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem; }
 .price-actions .btn { width: 100%; }
-.placeholder-note {
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.45;
-  color: var(--note);
-  background: var(--note-bg);
-  border-radius: 8px;
-  padding: 0.5rem 0.6rem;
-}
 
 .fine-print { margin-top: 2rem; max-width: 720px; }
 .fine-print p { color: var(--muted); font-size: 0.95rem; margin-bottom: 0.8rem; }
