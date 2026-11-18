@@ -1,37 +1,28 @@
-# Deploying this site on Cloudflare Pages
+# Deploying this site on Cloudflare Workers
 
-The site is static HTML, CSS, and one small script. There is no build step.
+The site is static HTML, CSS, and one small script. There is no build step. Cloudflare Workers Builds serves the repository root as the Worker `coach2learn-static`.
 
-This file is only instructions. Connecting Cloudflare, and pointing coach2learn.ca at it, are separate steps. Nothing in this branch changes GitHub Pages. The live site stays on the `gh-pages` branch until you choose to move DNS.
+This file is only instructions. It does not attach a domain, and it does not change GitHub Pages. The `gh-pages` branch stays as it is until Tim approves go-live.
 
-## What to select in Cloudflare
+## How a change ships
 
-1. In the Cloudflare dashboard, go to **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
-2. Choose the GitHub repository `coach2learn/coach2learn-website`.
-3. Set the **production branch** to `main`, and only after this relaunch has been merged. Do not use `gh-pages`. That branch is still the old site.
-4. Framework preset: **None**.
-5. Build command: **none**. Leave it empty.
-6. Build output directory: **`/`** (the root of the repository, where `index.html` sits).
+The GitHub repository `coach2learn/coach2learn-website` is connected to Cloudflare Workers Builds.
 
-If the form will not save a blank build command, use `exit 0` and keep the output directory as `/`.
+- A push to any branch other than `main` runs `npx wrangler versions upload`. That build gets a preview URL. The preview is not coach2learn.ca. Use it to read the pages.
+- A merge to `main` runs `npx wrangler deploy`. That is the production Worker.
 
-No environment variables are required. There is no install command.
+`wrangler.jsonc` names the Worker `coach2learn-static` and points assets at `./`, the repository root, where `index.html` sits. `_headers` is served with the site and Cloudflare applies it. It is not listed in `.assetsignore`. Markdown and Wrangler config files are left out of the upload.
 
-Cloudflare serves each HTML file at its real path (`work-with-me.html`, `privacy.html`). Links in the site use those paths, so the same files also open on a local static server and on GitHub Pages.
+No environment variables are required.
 
-The `_headers` file is picked up automatically. It only sets a few basic response headers. There is no `_redirects` file.
+## Collaborators
 
-## Preview before the domain moves
+Push to a branch and open or update a pull request. Do not push to `main`. That includes another person, and it includes an AI agent helping with copy. Production deploys only when a pull request is merged.
 
-Turn on preview deployments if you want a URL for this pull request. That URL is not coach2learn.ca. Use it to read the pages. The live GitHub Pages site does not change when you do this.
+## The domain waits for Tim
 
-## DNS comes later
+`coach2learn.ca` and `www` are not attached yet. Add those custom domains only at go-live, and only with Tim's approval.
 
-Adding coach2learn.ca is a separate step, after you are happy with a Pages deployment:
-
-1. In the Pages project, add the custom domain `coach2learn.ca` (and `www` if you want it).
-2. At the registrar, follow the DNS records Cloudflare shows you.
-
-Do that only when you are ready for the new site to replace whatever coach2learn.ca points at today. Do not add a `CNAME` file to this repo. A `CNAME` file is a GitHub Pages mechanism, and this host is Cloudflare.
+Do not add a `CNAME` file to this repo. A `CNAME` file is a GitHub Pages mechanism. This host is Cloudflare.
 
 Canonical links in the HTML already use `https://coach2learn.ca/`. They describe the intended domain. They do not move it.
