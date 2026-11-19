@@ -151,7 +151,7 @@ nav {
 
 .hero {
   background: var(--white);
-  padding: 6.5rem 2rem 5.5rem;
+  padding: 5rem 2rem 3.5rem;
   text-align: center;
   border-bottom: 1px solid var(--border);
 }
@@ -198,7 +198,7 @@ nav {
 .hero .sub + .sub { margin-bottom: 2.5rem; }
 .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-.section { padding: 5.5rem 2rem; }
+.section { padding: 4rem 2rem; }
 .section-inner { max-width: 960px; margin: 0 auto; }
 .section-inner.wide { max-width: 1080px; }
 .section-label {
@@ -222,7 +222,7 @@ nav {
 .section-body { font-size: 1.05rem; color: var(--muted); max-width: 640px; line-height: 1.75; }
 .section-body + .section-body { margin-top: 1rem; }
 .pillar-grid + .section-body, .steps-grid + .section-body, .offer-row + .section-body { margin-top: 2rem; }
-.section-subhead { font-family: 'Manrope', sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.25; color: var(--text); margin: 2.5rem 0 1rem; }
+.section-subhead { font-family: 'Manrope', sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.25; color: var(--text); margin: 3.5rem 0 1.25rem; }
 .section-body a:not(.btn) { color: var(--accent); }
 
 .quote-section {
@@ -258,13 +258,13 @@ nav {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
   margin-bottom: 1.2rem;
 }
 .who-card h3 { font-family: 'Manrope', sans-serif; font-size: 1.15rem; font-weight: 700; line-height: 1.35; color: var(--text); margin-bottom: 0.8rem; }
-.who-card p:not(.card-label) { font-size: 0.97rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+.who-card p:not(.card-label) { font-size: 0.97rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
 .who-card p:last-child { margin-bottom: 0; }
-.who-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1rem; }
+.who-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin: 0.25rem 0 1.25rem; }
 .who-card ul li { font-size: 0.97rem; color: var(--text); padding-left: 1.2rem; position: relative; }
 .who-card ul li::before {
   content: '';
