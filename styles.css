@@ -406,6 +406,8 @@ nav {
   margin-top: 0.5rem;
   align-items: stretch;
 }
+#offers .price-grid { margin-top: 2.2rem; }
+#offers .section-inner > .section-body:not(:first-of-type) { margin-top: 1.5rem; }
 .price-card {
   background: var(--white);
   border: 1px solid var(--border);
