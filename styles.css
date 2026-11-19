@@ -148,6 +148,22 @@ nav {
 }
 .btn-white:hover { background: var(--apricot-hover); color: var(--on-apricot); transform: translateY(-1px); }
 .btn-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.8rem; }
+.intro-promise {
+  max-width: 640px;
+  margin: 1.1rem auto 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+.outcomes {
+  margin-top: 2rem;
+  max-width: 720px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--text);
+}
 
 .hero {
   background: var(--white);
