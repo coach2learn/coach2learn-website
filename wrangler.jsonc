@@ -1,0 +1,12 @@
+{
+  "name": "coach2learn-static",
+  "compatibility_date": "2026-11-17",
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "./",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}

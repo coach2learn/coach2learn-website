@@ -1,263 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tim Girard | Life Coaching for Men & Fathers</title>
-  <meta name="description" content="Coaching for men and fathers who want to stop drifting — more patience at home, real presence with your kids, and confidence that doesn't depend on your job title. Book a 30-minute conversation." />
-  <meta property="og:title" content="Tim Girard | Life Coaching for Men & Fathers" />
-  <meta property="og:description" content="Most men aren't broken. They're just carrying too much — too quietly. Coaching for men and fathers ready to lead with intention." />
+  <title>Tim Girard Coaching | Personal Growth, Leadership Development, Team Coaching</title>
+  <meta name="description" content="Coaching with Tim Girard for individuals, leaders, and teams. A free 30-minute intro call on Google Meet. Clear prices in Canadian dollars." />
+  <link rel="canonical" href="https://coach2learn.ca/" />
+  <meta property="og:title" content="Tim Girard Coaching" />
+  <meta property="og:description" content="Helping people grow, as individuals, as leaders, and together. Coaching for individuals, leaders, and teams." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://coach2learn.github.io/coach2learn-website/" />
+  <meta property="og:url" content="https://coach2learn.ca/" />
+  <meta property="og:image" content="https://coach2learn.ca/images/tim-girard-960.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&family=Newsreader:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #FAFAF8; --white: #FFFFFF; --text: #222222;
-      --muted: #6E7781; --border: #E7E9EC; --accent: #2563EB; --gold: #C89B3C;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; font-size: 1rem; }
-    nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 1.2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-    .logo { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--text); letter-spacing: -0.01em; }
-    .logo span { color: var(--accent); }
-    .btn { display: inline-block; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.88rem; text-decoration: none; padding: 0.6rem 1.4rem; border-radius: 8px; transition: all 0.2s; letter-spacing: 0.01em; }
-    .btn-accent { background: var(--accent); color: #fff; }
-    .btn-accent:hover { background: #1d4ed8; transform: translateY(-1px); }
-    .btn-outline { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
-    .btn-outline:hover { background: var(--accent); color: #fff; }
-    .btn-lg { padding: 0.85rem 2rem; font-size: 0.95rem; border-radius: 10px; }
-    .btn-white { background: #fff; color: var(--accent); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.95rem; text-decoration: none; padding: 0.85rem 2rem; border-radius: 10px; transition: all 0.2s; display: inline-block; }
-    .btn-white:hover { background: #f0f4ff; transform: translateY(-1px); }
-    .btn-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.8rem; }
-    .hero { background: var(--white); padding: 6.5rem 2rem 5.5rem; text-align: center; border-bottom: 1px solid var(--border); }
-    .hero .eyebrow { font-family: 'Manrope', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
-    .hero h1 { font-family: 'Manrope', sans-serif; font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; color: var(--text); max-width: 760px; margin: 0 auto 1.5rem; }
-    .hero h1 em { font-style: normal; color: var(--accent); }
-    .hero .sub { font-size: 1.1rem; color: var(--muted); max-width: 560px; margin: 0 auto 2.5rem; font-weight: 400; line-height: 1.7; }
-    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .section { padding: 5.5rem 2rem; }
-    .section-inner { max-width: 960px; margin: 0 auto; }
-    .section-label { font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
-    .section-title { font-family: 'Manrope', sans-serif; font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; color: var(--text); margin-bottom: 1rem; }
-    .section-body { font-size: 1.05rem; color: var(--muted); max-width: 620px; line-height: 1.75; }
-    .quote-section { background: var(--bg); padding: 5rem 2rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; }
-    .quote-section blockquote { font-family: 'Newsreader', serif; font-style: italic; font-size: clamp(1.5rem, 3vw, 2.1rem); color: var(--text); max-width: 680px; margin: 0 auto 1.2rem; line-height: 1.5; font-weight: 400; }
-    .quote-section cite { font-family: 'Manrope', sans-serif; font-size: 0.85rem; color: var(--muted); font-style: normal; letter-spacing: 0.06em; }
-    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
-    .who-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
-    .who-card .card-label { font-family: 'Manrope', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
-    .who-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
-    .who-card ul li { font-size: 0.97rem; color: var(--text); padding-left: 1.2rem; position: relative; }
-    .who-card ul li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-    .step-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
-    .step-card .step-num { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 2rem; color: var(--accent); opacity: 0.25; line-height: 1; margin-bottom: 1rem; }
-    .step-card h3 { font-family: 'Manrope', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem; }
-    .step-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
-    .pillars-bg { background: var(--text); }
-    .pillars-bg .section-title { color: #fff; }
-    .pillars-bg .section-label { color: var(--gold); }
-    .pillars-bg .section-body { color: #9ca3af; }
-    .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.2rem; margin-top: 3rem; }
-    .pillar-card { background: #2d2d2d; border: 1px solid #3d3d3d; border-radius: 12px; padding: 1.8rem 1.6rem; }
-    .pillar-card .p-num { font-family: 'Manrope', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
-    .pillar-card h3 { font-family: 'Manrope', sans-serif; font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 1.1rem; }
-    .pillar-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
-    .pillar-card ul li { font-size: 0.88rem; color: #9ca3af; padding-left: 1rem; position: relative; }
-    .pillar-card ul li::before { content: '–'; position: absolute; left: 0; color: #555; }
-    .about-grid { display: grid; grid-template-columns: 260px 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
-    .photo-placeholder { background: var(--white); border: 1px solid var(--border); border-radius: 12px; aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: var(--muted); font-family: 'Manrope', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
-    .photo-placeholder svg { width: 40px; height: 40px; opacity: 0.25; }
-    .about-text p { font-size: 1rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
-    .about-text p.lead { font-size: 1.1rem; color: var(--text); font-weight: 500; }
-    .faq-list { max-width: 720px; margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem; }
-    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1.8rem; }
-    .faq-item h3 { font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .faq-item p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
-    .cta-banner { background: var(--accent); padding: 5.5rem 2rem; text-align: center; }
-    .cta-banner h2 { font-family: 'Manrope', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -0.025em; color: #fff; max-width: 640px; margin: 0 auto 1rem; line-height: 1.15; }
-    .cta-banner p { color: #bfdbfe; font-size: 1.05rem; max-width: 500px; margin: 0 auto 2.2rem; line-height: 1.7; }
-    .cta-banner .btn-note { color: #bfdbfe; }
-    footer { background: var(--white); border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    footer p { font-size: 0.82rem; color: var(--muted); }
-    @media (max-width: 680px) {
-      .who-grid { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
-      .photo-placeholder { aspect-ratio: 4/3; }
-      footer { flex-direction: column; text-align: center; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <nav>
-    <div class="logo">Tim Girard<span>.</span></div>
-    <a class="btn btn-accent" href="https://calendar.app.google/k3iLUEM8Nym9PTmL9" target="_blank">Book a Conversation</a>
+    <a class="logo" href="index.html">Tim Girard<span>.</span></a>
+    <div class="nav-links">
+      <a href="work-with-me.html">Work With Me</a>
+      <a href="#about">About</a>
+      <a class="btn btn-accent" href="https://calendly.com/coach2learn/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
+    </div>
   </nav>
 
-  <section class="hero">
-    <p class="eyebrow">Life Coaching for Men &amp; Fathers</p>
-    <h1>Stop Living on <em>Autopilot.</em></h1>
-    <p class="sub">More patience with your kids. Real presence at home. Confidence that doesn't depend on your job title. Coaching for men who provide for everyone — and forgot about themselves.</p>
-    <div class="hero-actions">
-      <a class="btn btn-accent btn-lg" href="https://calendar.app.google/k3iLUEM8Nym9PTmL9" target="_blank">Book a 30-Minute Conversation</a>
-      <a class="btn btn-outline btn-lg" href="#how">How It Works</a>
-    </div>
-    <p class="btn-note">No pitch. No pressure. If coaching isn't the right fit, I'll tell you.</p>
-  </section>
+  <main id="main">
+    <section class="hero">
+      <p class="eyebrow">Personal Growth | Leadership Development | Team Coaching</p>
+      <h1>Grow With Purpose. <em>Lead With Confidence.</em></h1>
+      <p class="sub">Whether you're navigating a change, growing as a leader, strengthening your team, or simply looking for a fresh perspective, meaningful growth starts with a conversation.</p>
+      <p class="sub">Coaching creates space to think differently, explore possibilities, and gain the clarity to move forward with confidence.</p>
+      <div class="hero-actions">
+        <a class="btn btn-accent btn-lg" href="https://calendly.com/coach2learn/30min" target="_blank" rel="noopener noreferrer">Book a Free Intro Call</a>
+        <a class="btn btn-outline btn-lg" href="#how">Explore Coaching</a>
+      </div>
+      <p class="btn-note">Real conversations. Fresh perspectives. Meaningful progress.</p>
+      <p class="softer-start">Not ready for a call? Start smaller: <a href="https://thedadpub.com" target="_blank" rel="noopener noreferrer">join The Dad Pub</a>, or <a href="#signup">get occasional notes from me</a>.</p>
+    </section>
 
-  <section class="quote-section">
-    <blockquote>"Most men aren't broken. They're just carrying too much — too quietly."</blockquote>
-    — Tim Girard
-  </section>
-
-  <section class="section" style="background: var(--white); border-bottom: 1px solid var(--border);">
-    <div class="section-inner">
-      <p class="section-label">Who This Is For</p>
-      <h2 class="section-title">You don't need to be struggling<br>to deserve support.</h2>
-      <p class="section-body">You provide. You show up. On paper, things are fine. But somewhere between the career, the kids, and the mortgage — you stopped feeling like yourself. You don't need a crisis to want more. Wanting more is enough.</p>
-      <div class="who-grid">
-        <div class="who-card">
-          <p class="card-label">You're ready to</p>
-          <ul>
-            <li>Be more patient with your kids</li>
-            <li>Reconnect with your partner</li>
-            <li>Stop bringing work stress home</li>
-            <li>Build routines that actually stick</li>
-            <li>Feel like yourself again</li>
-            <li>Lead with intention, not reaction</li>
-          </ul>
+    <section class="section" style="background: var(--white); border-bottom: 1px solid var(--border);">
+      <div class="section-inner">
+        <p class="section-label">Who This Is For</p>
+        <h2 class="section-title">Coaching That Meets You<br>Where You Are.</h2>
+        <p class="section-body">You can be doing fine at work and still feel like you've lost the plot at home, or the other way around. Everyone has something they're working toward. Sometimes it's a big life decision. Sometimes it's finding a better way to lead, connect, or collaborate. And sometimes it's simply knowing that things could be different, even if you're not quite sure how. Whatever brings you here, you don't have to figure it all out on your own.</p>
+        <div class="who-grid">
+          <div class="who-card">
+            <p class="card-label">Personal Coaching</p>
+            <h3>Make space for the person you want to become.</h3>
+            <p>Life gets busy. Between careers, relationships, family, and the everyday demands on our time, it's easy to lose sight of our own priorities. Personal coaching gives you an opportunity to reconnect with yourself, explore what's important, and move forward with greater intention.</p>
+            <ul>
+              <li>Finding clarity during life's transitions</li>
+              <li>Building confidence and self-awareness</li>
+              <li>Creating greater balance and purpose</li>
+              <li>Navigating decisions and uncertainty</li>
+              <li>Strengthening relationships and personal habits</li>
+              <li>Defining success on your own terms</li>
+            </ul>
+            <p>You don't need to have a problem to solve. Sometimes the desire to grow is reason enough.</p>
+          </div>
+          <div class="who-card">
+            <p class="card-label">Leadership &amp; Team Coaching</p>
+            <h3>Better conversations. Stronger connections. More effective teams.</h3>
+            <p>Great leadership isn't about having all the answers. It's about creating an environment where people can think, contribute, collaborate, and bring out the best in one another.</p>
+            <p>Having spent years working alongside leaders and teams through change, uncertainty, and growth, I've seen how the right conversations can shift perspectives, strengthen relationships, and open the door to better ways of working.</p>
+            <ul>
+              <li>Lead with greater confidence and authenticity</li>
+              <li>Build trust and strengthen communication</li>
+              <li>Navigate change and challenging conversations</li>
+              <li>Improve collaboration and team dynamics</li>
+              <li>Develop self-awareness and leadership presence</li>
+              <li>Create clarity, shared ownership, and alignment</li>
+            </ul>
+            <p>My approach isn't about introducing another rigid framework or telling people how they should work. It's about helping leaders and teams discover what works for them and supporting meaningful, sustainable progress.</p>
+          </div>
         </div>
-        <div class="who-card">
-          <p class="card-label">You don't need to be</p>
-          <ul>
-            <li>Falling apart to ask for help</li>
-            <li>At rock bottom to want more</li>
-            <li>Perfect before you start</li>
-            <li>Someone who has it figured out</li>
-            <li>Certain it will work</li>
-            <li>Anything other than willing</li>
-          </ul>
+        <h3 class="section-subhead">Growth Begins With Curiosity.</h3>
+        <p class="section-body">You don't have to be stuck to want something different. Maybe you're doing well, but you're wondering what's next. Perhaps you're stepping into new responsibilities, trying to bring people together, or looking for a little more balance between your professional and personal life. You might have a clear goal, or you might simply have a feeling that there's something worth exploring. That's a great place to start.</p>
+        <p class="section-body">Coaching offers an opportunity to slow down, step outside your usual patterns, and look at things from a new perspective. Because sometimes the most valuable thing you can do is make space to think.</p>
+      </div>
+    </section>
+
+    <section class="section" id="how" style="border-bottom: 1px solid var(--border);">
+      <div class="section-inner">
+        <p class="section-label">How It Works</p>
+        <h2 class="section-title">A Simple, Supportive<br>Path Forward.</h2>
+        <p class="section-body">Coaching should feel comfortable, collaborative, and purposeful. No complicated process. No need to arrive with all the answers.</p>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <h3>Let's Connect</h3>
+            <p>It starts with a free 30-minute conversation. We'll get to know each other, talk about what brings you here, and explore what you're hoping to achieve. You'll have an opportunity to ask questions and get a feel for how I work. The goal is simple: to figure out together whether coaching is the right next step.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <h3>Explore What's Possible</h3>
+            <p>Every person, leader, and team is different. Together, we'll identify what matters most and create an approach that makes sense for your goals and circumstances. Through thoughtful questions, honest conversations, and fresh perspectives, we'll uncover opportunities that might not have been obvious before.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <h3>Turn Insight Into Progress</h3>
+            <p>Awareness is powerful. What you do with it is where meaningful change begins. We'll explore practical next steps, reflect on what you're learning, and build on your progress along the way. There isn't one prescribed path to growth.</p>
+          </div>
+        </div>
+        <p class="outcomes">People usually leave with a clearer next conversation, a decision they can stand behind, or a better way to show up in a meeting or at the dinner table.</p>
+      </div>
+    </section>
+
+    <section class="section" id="offers" style="border-bottom: 1px solid var(--border);">
+      <div class="section-inner wide">
+        <p class="section-label">Work With Me</p>
+        <h2 class="section-title">Your Next Step Starts<br>With a Conversation.</h2>
+        <p class="section-body">Whether you're looking for a single coaching conversation, ongoing personal or leadership development, or support for your team, there's a place to begin.</p>
+        <div class="price-grid">
+          <article class="price-card" id="intro">
+            <h2>Intro Call with Tim Girard</h2>
+            <p class="amount">Free</p>
+            <p>Thirty minutes on Google Meet. Where you are, where you want to be, and whether coaching fits. Not a pitch, and not a paid session.</p>
+            <div class="price-actions">
+              <a class="btn btn-accent" href="https://calendly.com/coach2learn/30min" target="_blank" rel="noopener noreferrer">Book a Free Intro Call</a>
+            </div>
+          </article>
+
+          <article class="price-card" id="stripe-60">
+            <h2>30-minute session</h2>
+            <p class="amount">$60 <span>CAD</span></p>
+            <p>One coaching session when you want a single conversation, not a package.</p>
+            <div class="price-actions">
+              <a class="btn btn-accent" href="https://buy.stripe.com/14A00k4j54ER40F11X9Zm00" target="_blank" rel="noopener noreferrer">Pay $60</a>
+            </div>
+          </article>
+
+          <article class="price-card" id="stripe-100">
+            <h2>One-hour session</h2>
+            <p class="amount">$100 <span>CAD</span></p>
+            <p>More room when the topic needs it. Same coaching, with more time.</p>
+            <div class="price-actions">
+              <a class="btn btn-accent" href="https://buy.stripe.com/dRm3cw02P2wJbt75id9Zm01" target="_blank" rel="noopener noreferrer">Pay $100</a>
+            </div>
+          </article>
+
+          <article class="price-card featured" id="stripe-500">
+            <h2>Six sessions</h2>
+            <p class="amount">$500 <span>CAD</span></p>
+            <p>Six one-hour sessions, to be used within six months. About one session free, set against the one-hour rate.</p>
+            <div class="price-actions">
+              <a class="btn btn-accent" href="https://buy.stripe.com/6oU3cw4j5dbn1Sx2619Zm02" target="_blank" rel="noopener noreferrer">Pay $500</a>
+            </div>
+          </article>
+        </div>
+
+        <article class="price-card" id="team" style="margin-top: 1.5rem;">
+          <h2>Leadership &amp; Team Development</h2>
+          <p class="amount">Let's Talk</p>
+          <p>Looking to support a leadership team, improve collaboration, or create space for a meaningful team conversation? Let's explore your goals and discuss an approach tailored to your people and organization. Team coaching is priced per engagement, not at the individual session rates above.</p>
+          <div class="price-actions">
+            <a class="btn btn-accent" href="https://calendly.com/coach2learn/30min" target="_blank" rel="noopener noreferrer">Book a Free Intro Call</a>
+          </div>
+        </article>
+
+        <p class="section-body">All listed individual coaching prices are in Canadian dollars. No automatic renewals or long-term commitments.</p>
+        <p class="section-actions"><a class="btn btn-outline" href="work-with-me.html">Explore Coaching Options</a></p>
+      </div>
+    </section>
+
+    <section class="section pillars-bg">
+      <div class="section-inner">
+        <p class="section-label">The Framework</p>
+        <h2 class="section-title">Four Pillars.<br>Many Ways to Grow.</h2>
+        <p class="section-body">Growth doesn't happen in isolation. How we lead ourselves influences how we show up for others, the choices we make, and the impact we have. These four pillars provide a flexible foundation for exploring personal growth, leadership, and the things that matter most.</p>
+        <div class="pillar-grid">
+          <div class="pillar-card">
+            <p class="p-num">01</p>
+            <h3>Lead Yourself</h3>
+            <p>It starts with understanding yourself. Build self-awareness, develop confidence, and explore the habits, beliefs, and choices that shape how you live and lead.</p>
+            <ul><li>Identity</li><li>Mindset</li><li>Confidence</li><li>Health &amp; Habits</li></ul>
+          </div>
+          <div class="pillar-card">
+            <p class="p-num">02</p>
+            <h3>Lead With Others</h3>
+            <p>How we connect matters. Strengthen communication, build trust, navigate challenges, and create more meaningful relationships at home, at work, and within your community.</p>
+            <ul><li>Relationships</li><li>Communication</li><li>Trust</li><li>Collaboration</li></ul>
+          </div>
+          <div class="pillar-card">
+            <p class="p-num">03</p>
+            <h3>Build What Matters</h3>
+            <p>Put your energy where it counts. Explore your priorities, align your actions with your values, and make intentional choices about the work, relationships, and opportunities you pursue.</p>
+            <ul><li>Purpose</li><li>Career</li><li>Boundaries</li><li>Balance</li></ul>
+          </div>
+          <div class="pillar-card">
+            <p class="p-num">04</p>
+            <h3>Leave a Legacy</h3>
+            <p>Make an impact that matters to you. Consider the influence you have on the people around you, the example you set, and the contribution you want to make through your work and your life.</p>
+            <ul><li>Leadership</li><li>Character</li><li>Community</li><li>Impact</li></ul>
+          </div>
+        </div>
+        <p class="section-body">These aren't four boxes you need to check. They're simply different places to begin a meaningful conversation.</p>
+      </div>
+    </section>
+
+    <section class="section" id="about" style="background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div class="section-inner">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Meet Tim.<br>I believe some of our most meaningful breakthroughs begin with a great conversation.</h2>
+        <div class="about-grid">
+          <picture>
+            <source type="image/webp" srcset="images/tim-girard-480.webp 480w, images/tim-girard-960.webp 960w" sizes="(max-width: 680px) min(420px, calc(100vw - 2.5rem)), 260px" />
+            <img class="headshot" src="images/tim-girard-960.jpg" srcset="images/tim-girard-480.jpg 480w, images/tim-girard-960.jpg 960w" sizes="(max-width: 680px) min(420px, calc(100vw - 2.5rem)), 260px" alt="Tim Girard" width="960" height="1330" loading="lazy" decoding="async" />
+          </picture>
+          <div class="about-text">
+            <p class="lead">I'm Tim Girard — a coach, facilitator, husband, father, and lifelong learner.</p>
+            <p>For nearly two decades, I've worked alongside individuals, leaders, and teams as they've navigated change, tackled challenges, and discovered better ways forward.</p>
+            <p>Throughout my career, I've had the opportunity to guide teams through uncertainty, support leaders in their development, facilitate challenging conversations, and help people find clarity when the path ahead wasn't always obvious.</p>
+            <p>People are often far more capable than they give themselves credit for. Sometimes, what makes the biggest difference isn't another piece of advice. It's having someone who genuinely listens, asks thoughtful questions, challenges your perspective, and helps you recognize possibilities you hadn't considered. That's what draws me to coaching.</p>
+            <p>I bring curiosity, empathy, real-world leadership experience, and a genuine interest in helping people grow. I don't believe in one-size-fits-all solutions, and I'm not here to tell you how to live your life or lead your team. I'm here to create the space for you to explore, discover, and move forward with greater clarity and confidence.</p>
+            <p>Outside of work, being a husband and father continues to teach me plenty about patience, communication, perspective, and personal growth. I'm learning along the way, just like everyone else.</p>
+            <p>Because great coaching isn't about having all the answers. It's about helping people discover their own.</p>
+            <p>If you're a dad who wants a free community, that's <a href="https://thedadpub.com" target="_blank" rel="noopener noreferrer">The Dad Pub</a>. This site is the paid coaching, and the two are separate.</p>
+            <a class="btn btn-accent btn-lg" href="https://calendly.com/coach2learn/30min" target="_blank" rel="noopener noreferrer">Book a Free Intro Call</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="how" style="border-bottom: 1px solid var(--border);">
-    <div class="section-inner">
-      <p class="section-label">How It Works</p>
-      <h2 class="section-title">No mystery. No sales funnel.<br>Three steps.</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">1</div>
-          <h3>A real conversation</h3>
-          <p>We talk for 30 minutes about where you are and where you want to be. Not a sales script — an honest conversation between two men. If I'm not the right fit, I'll say so and point you somewhere better.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">2</div>
-          <h3>A clear starting point</h3>
-          <p>If we work together, we identify the one area where change would matter most right now — home, health, work, or self — and build from there. No 47-point life overhaul.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">3</div>
-          <h3>Steady, honest progress</h3>
-          <p>Regular sessions where you think out loud, get challenged when you need it, and stay accountable to the man you said you wanted to become. Progress is built in ordinary weeks.</p>
+    <section class="section" id="faq">
+      <div class="section-inner">
+        <p class="section-label">Questions You Might Have</p>
+        <h2 class="section-title">A Few Questions<br>You Might Have.</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>I've never worked with a coach before. What should I expect?</h3>
+            <p>That's completely okay. You don't need to prepare anything special or know exactly what you want to discuss. Coaching is a collaborative conversation. I'll listen, ask questions, offer observations, and occasionally challenge your thinking to help you explore new perspectives. You bring your experiences and goals. We'll discover the next steps together.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is coaching only for people facing challenges?</h3>
+            <p>Not at all. Some people come to coaching because they're facing a difficult decision or transition. Others are doing well and simply want to grow, gain perspective, or explore what's next. Coaching can be just as valuable when you're moving toward something as when you're working through something.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you coach both individuals and teams?</h3>
+            <p>Absolutely. My work spans personal growth, individual leadership development, and team coaching and facilitation. While the conversations and approaches may differ, the underlying principles remain the same: curiosity, self-awareness, connection, and meaningful progress.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How is coaching different from therapy or consulting?</h3>
+            <p>Coaching is a collaborative process focused on self-awareness, growth, goals, and meaningful change. Rather than prescribing solutions, I help you explore your own perspectives, choices, and possibilities. Consulting typically involves providing specialized advice or recommendations. Therapy can also support personal growth while providing clinical treatment and support for mental health concerns. Each has its place, and coaching can complement other forms of professional support.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What does it cost?</h3>
+            <p>The intro call is free. A 30-minute coaching session is $60 CAD. An hour is $100 CAD. Six one-hour sessions are $500 CAD, to be used within six months. The figure on the page is the figure you pay. The breakdown is on <a href="work-with-me.html">Work With Me</a>.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I start with one session?</h3>
+            <p>Yes. Pay for a 30-minute or one-hour session through Stripe, and I'll email your booking link within one business day. The six-session package is there if you already know you want a longer run.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How much time does this take?</h3>
+            <p>One conversation at a time. If you take the six-session package, that's six hours of coaching over up to six months, plus whatever you choose to practice in between.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What if I'm not sure coaching is right for me?</h3>
+            <p>That's exactly why I offer a free introductory conversation. We can talk about what you're looking for, explore whether coaching might help, and decide together if moving forward makes sense. No obligation. Just a genuine conversation.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How do I book a paid session?</h3>
+            <p>Pay securely on Stripe. I email you within one business day with a link to choose your session time. For six sessions, that link covers all six, to be used within six months. The only session you can book directly is the <a href="https://calendly.com/coach2learn/30min" target="_blank" rel="noopener noreferrer">free intro call</a>.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section pillars-bg">
-    <div class="section-inner">
-      <p class="section-label">The Framework</p>
-      <h2 class="section-title">Four Pillars.<br>One Direction.</h2>
-      <p class="section-body">A simple model for becoming the man you respect — at home, at work, and within yourself.</p>
-      <div class="pillar-grid">
-        <div class="pillar-card">
-          <p class="p-num">01</p>
-          <h3>Lead Yourself</h3>
-          <ul><li>Identity</li><li>Health &amp; Habits</li><li>Confidence</li><li>Mindset</li></ul>
-        </div>
-        <div class="pillar-card">
-          <p class="p-num">02</p>
-          <h3>Lead Your Home</h3>
-          <ul><li>Marriage</li><li>Parenting</li><li>Communication</li><li>Presence</li></ul>
-        </div>
-        <div class="pillar-card">
-          <p class="p-num">03</p>
-          <h3>Build What Matters</h3>
-          <ul><li>Career &amp; Purpose</li><li>Money</li><li>Boundaries</li><li>Energy</li></ul>
-        </div>
-        <div class="pillar-card">
-          <p class="p-num">04</p>
-          <h3>Leave a Legacy</h3>
-          <ul><li>Character</li><li>Community</li><li>Impact</li><li>Growth</li></ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about" style="background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-    <div class="section-inner">
-      <p class="section-label">About</p>
-      <h2 class="section-title">I'm not here because<br>I have all the answers.</h2>
-      <div class="about-grid">
-        <div class="photo-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          Headshot coming soon
-        </div>
-        <div class="about-text">
-          <p class="lead">I'm here because I've lived the questions.</p>
-          <p>I'm a husband and a father. I've spent nearly two decades leading teams through change, coaching leaders through uncertainty, and helping people find clarity when everything feels like too much.</p>
-          <p>But the hardest leadership lessons didn't happen in boardrooms. They happened at my own kitchen table — balancing work with family, learning to communicate better, choosing discipline over drift.</p>
-          <p>Today I coach men through the same work. Not because I'm perfect — because I'm committed to becoming better, and I know what it takes to keep showing up.</p>
-          <p>My coaching focuses on alignment, not performance. When you become the man you respect, everything else improves — your marriage, your parenting, your confidence, your health. Not because we chase those things. Because they follow.</p>
-          <br/>
-          <a class="btn btn-accent btn-lg" href="https://calendar.app.google/k3iLUEM8Nym9PTmL9" target="_blank">Book a 30-Minute Conversation</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-inner">
-      <p class="section-label">Questions Men Actually Ask</p>
-      <h2 class="section-title">The stuff you're wondering<br>but might not ask.</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <h3>Is this therapy?</h3>
-          <p>No. Therapy looks backward to heal. Coaching looks forward to build. If what you're carrying needs a therapist, I'll be straight with you and help you find one. Many men benefit from both.</p>
-        </div>
-        <div class="faq-item">
-          <h3>I'm not a "talk about my feelings" guy.</h3>
-          <p>Good news — this isn't that. Coaching is structured conversation about what you want and what's in the way. Think of it closer to working with a trainer than lying on a couch.</p>
-        </div>
-        <div class="faq-item">
-          <h3>What does it cost?</h3>
-          <p>We cover that in the first conversation once we both know it's a fit. No games — you'll get a straight number, and there's zero obligation to continue after the call.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Do I need to be a dad?</h3>
-          <p>No. I work with men, full stop. But as a father myself, a lot of my work centres on the unique weight dads carry — the pull between providing and being present.</p>
-        </div>
-        <div class="faq-item">
-          <h3>What if it doesn't work for me?</h3>
-          <p>Then we stop. No contracts trapping you, no guilt. Coaching only works if you're getting real value — and you'll know within a few sessions whether you are.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-banner">
-    <h2>Thirty minutes. One honest conversation.</h2>
-    <p>Where you are. Where you want to be. What's actually in the way. That's it — no pitch, no pressure, no performance.</p>
-    <a class="btn-white" href="https://calendar.app.google/k3iLUEM8Nym9PTmL9" target="_blank">Book Your Conversation</a>
-    <p class="btn-note">If I can't help you, I'll tell you — and point you to someone who can.</p>
-  </section>
+    <section class="cta-banner">
+      <h2>Let's Start a Conversation.</h2>
+      <p>You don't need a perfect plan, a big problem, or all the answers to take the next step. Whether you're looking to grow personally, lead more effectively, or help your team thrive, it starts with being curious about what's possible. Let's explore that together.</p>
+      <a class="btn-white" href="https://calendly.com/coach2learn/30min" target="_blank" rel="noopener noreferrer">Book Your Free 30-Minute Intro Call</a>
+      <p class="btn-note">No pressure. No expectations. Just a conversation worth having.</p>
+      <p class="cta-softer">Not ready for a call? Start smaller: <a href="https://thedadpub.com" target="_blank" rel="noopener noreferrer">join The Dad Pub</a>, or <a href="#signup">get occasional notes from me</a>.</p>
+    </section>
+  </main>
 
   <footer>
-    <div class="logo">Tim Girard<span style="color:var(--accent)">.</span></div>
-    <p>© 2026 Coach2Learn. All rights reserved.</p>
+    <div class="footer-brand">
+      <a class="logo" href="index.html">Tim Girard<span>.</span></a>
+      <p>Tim Girard Coaching — Personal Growth · Leadership Development · Team Coaching.</p>
+      <p>Helping people grow — as individuals, as leaders, and together.</p>
+      <p>Looking for a community focused on fatherhood and connection? Visit <a href="https://thedadpub.com" target="_blank" rel="noopener noreferrer">The Dad Pub</a>.</p>
+    </div>
+    <form class="newsletter" id="signup" method="post" action="https://assets.mailerlite.com/jsonp/2775209/forms/203960973231392575/subscribe">
+      <h2>Ideas for Living and Leading Well</h2>
+      <p class="hint">Occasional reflections on personal growth, leadership, relationships, and the everyday experiences that shape who we become. Practical perspectives, thoughtful questions, and ideas worth exploring. No clutter. Just something thoughtful in your inbox from time to time.</p>
+      <div class="newsletter-row">
+        <div class="newsletter-field">
+          <label for="newsletter-name">First name</label>
+          <input id="newsletter-name" name="fields[name]" type="text" required autocomplete="given-name" />
+        </div>
+        <div class="newsletter-field">
+          <label for="newsletter-email">Email</label>
+          <input id="newsletter-email" name="fields[email]" type="email" required autocomplete="email" inputmode="email" />
+        </div>
+        <button class="btn btn-accent" type="submit">Subscribe</button>
+      </div>
+      <input type="hidden" name="ml-submit" value="1" />
+      <input type="hidden" name="anticsrf" value="true" />
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <p class="newsletter-privacy">Details are on the <a href="privacy.html#email-notes">privacy page</a>.</p>
+    </form>
+    <div class="footer-meta">
+      <p><a href="work-with-me.html">Work With Me</a> · <a href="privacy.html">Privacy</a></p>
+      <p>© 2026 Coach2Learn. All rights reserved.</p>
+    </div>
   </footer>
+  <script src="site.js" defer></script>
 </body>
 </html>
