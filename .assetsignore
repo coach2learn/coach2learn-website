@@ -8,3 +8,4 @@ node_modules
 .github
 .assetsignore
 *.md
+worker.js
