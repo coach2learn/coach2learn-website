@@ -26,3 +26,7 @@ Push to a branch and open or update a pull request. Do not push to `main`. That 
 Do not add a `CNAME` file to this repo. A `CNAME` file is a GitHub Pages mechanism. This host is Cloudflare.
 
 Canonical links in the HTML already use `https://coach2learn.ca/`. They describe the intended domain. They do not move it.
+
+## www
+
+`worker.js` runs first. A request whose host is `www.coach2learn.ca` is answered with a 301 to the same path and query on `https://coach2learn.ca`. Every other request is served from the static assets, and `_headers` still applies.
